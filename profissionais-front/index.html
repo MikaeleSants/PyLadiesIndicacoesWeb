@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Profissionais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/LOGO.ico">
+</head>
+<body>
+<header>
+    <img src="images/logo.svg" alt="Logo" class="logo">
+    <h1>Cadastro de Profissionais</h1>
+</header>
+
+<div class="container">
+    <form id="form-profissional">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <select id="area" required>
+            <option value="" disabled selected>Selecione uma área</option>
+        </select>
+        <input type="text" id="nova-area" placeholder="Digite nova área" style="display:none">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="contato" placeholder="Contato" required>
+
+        <h3>
+            Campos Personalizados
+            <span class="tooltip-icon">?</span>
+        </h3>
+        <p class="descricao-campos">Adicione informações que julgue necessárias, como: plano de saúde que o profissional da área de saúde atende.</p>
+        <div id="campos-especificos"></div>
+        <button type="button" id="adicionar-campo">+ Adicionar Campo</button>
+
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
+
+<div class="tabela-container">
+    <h2>Lista de Profissionais</h2>
+    <table id="tabela-profissionais">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Área</th>
+            <th>Contato</th>
+            <th>Extras</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <div class="social-links">
+        <a href="https://www.instagram.com/pyladiesfortaleza?igsh=MWkzbmQwc3ZiNWQweA==" target="_blank">
+            <img src="images/instagram.svg" alt="Instagram PyLadies" />
+        </a>
+        <a href="https://linktr.ee/pyladiesfortaleza?fbclid=PAb21jcANG01NleHRuA2FlbQIxMQABp4os77h4rhxeS_7VKlQdI7j0Ixl9hal1yoF8TpTlXnwKd-ayLqYEi11_WfLm_aem_P56tDkHKhmDFvOM9A_Pu9g" target="_blank">
+            <img src="images/linkedin.svg" alt="Linktree PyLadies" />
+        </a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
