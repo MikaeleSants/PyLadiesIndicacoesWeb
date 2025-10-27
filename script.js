@@ -1,6 +1,6 @@
-const API_URL = "http://localhost:8080/profissionais";
-const API_AREA = "http://localhost:8080/profissionais/area/";
-const API_NOME = "http://localhost:8080/profissionais/nome/";
+const API_URL = "https://pyladiesindicacoesintegracao.onrender.com/profissionais";
+const API_AREA = "https://pyladiesindicacoesintegracao.onrender.com/profissionais/area/";
+const API_NOME = "https://pyladiesindicacoesintegracao.onrender.com/profissionais/nome/";
 
 window.onload = () => {
     try {
