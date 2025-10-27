@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:8080/profissionais";
-const API_AREA = "http://localhost:8080/profissionais/area/";
+const API_URL = "https://pyladiesindicacoesintegracao.onrender.com/profissionais";
+const API_AREA = "https://pyladiesindicacoesintegracao.onrender.com/profissionais/area/";
 
 window.onload = () => {
     const selectArea = document.getElementById("area");
