@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Profissionais</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/LOGO.ico">
@@ -13,23 +14,41 @@
 </header>
 
 <div class="container">
+
     <form id="form-profissional">
-        <input type="text" id="nome" placeholder="Nome" required>
-        <select id="area" required>
-            <option value="" disabled selected>Selecione uma área</option>
-        </select>
-        <input type="text" id="nova-area" placeholder="Digite nova área" style="display:none">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="text" id="contato" placeholder="Contato" required>
 
-        <h3>
-            Campos Personalizados
-            <span class="tooltip-icon">?</span>
-        </h3>
-        <p class="descricao-campos">Adicione informações que julgue necessárias, como: plano de saúde que o profissional da área de saúde atende.</p>
-        <div id="campos-especificos"></div>
-        <button type="button" id="adicionar-campo">+ Adicionar Campo</button>
+        <div class="registrador">
+            <h3>Informações de quem está cadastrando</h3>
+            <input type="text" id="registrador-nome" placeholder="Seu nome" required aria-label="Seu nome">
+            <input type="email" id="registrador-email" placeholder="Seu email" required aria-label="Seu email">
+        </div>
 
+        <div style="display:none;">
+            <input type="text" id="data-criacao">
+        </div>
+
+
+        <div class="profissional">
+            <h3>Informações do profissional indicado</h3>
+            <input type="text" id="nome" placeholder="Nome do profissional" required aria-label="Nome do profissional">
+            <select id="area" required aria-label="area">
+                <option value="" disabled selected>Selecione uma área</option>
+            </select>
+            <input type="text" id="nova-area" placeholder="Digite nova área" style="display:none">
+            <input type="text" id="descricao" placeholder="Descrição do profissional" required aria-label="Descrição do profissional">
+            <input type="email" id="email" placeholder="Email do profissional" required aria-label="Email do profissional">
+            <input type="text" id="contato" placeholder="Contato" aria-label="Contato">
+            <input type="text" id="linkedin" placeholder="LinkedIn">
+            <input type="text" id="rede-social" placeholder="Outra rede social">
+
+            <h3>
+                Campos Personalizados
+                <span class="tooltip-icon">?</span>
+            </h3>
+            <p class="descricao-campos">Adicione informações que julgue necessárias, como: plano de saúde que o profissional da área de saúde atende.</p>
+            <div id="campos-especificos"></div>
+            <button type="button" id="adicionar-campo">+ Adicionar Campo</button>
+        </div>
 
         <button type="submit">Cadastrar</button>
     </form>
@@ -37,16 +56,34 @@
 
 <div class="tabela-container">
     <h2>Lista de Profissionais</h2>
+
+
+    <div class="barra-busca" style="margin-bottom:16px; display:flex; gap:8px; align-items:center;">
+        <label for="search-type">Buscar por:</label>
+        <select id="search-type" aria-label="Tipo de busca">
+            <option value="nome" selected>Nome</option>
+            <option value="area">Área</option>
+        </select>
+        <input type="text" id="search-input" placeholder="Digite o termo de busca" aria-label="Campo de busca">
+        <button type="button" id="btn-buscar">Buscar</button>
+        <button type="button" id="btn-limpar">Limpar</button>
+    </div>
+
     <table id="tabela-profissionais">
         <thead>
         <tr>
             <th>Nome</th>
             <th>Área</th>
+            <th>Descrição</th>
+            <th>Email</th>
             <th>Contato</th>
-            <th>Extras</th>
+            <th>LinkedIn</th>
+            <th>Rede Social</th>
+            <th>Mais Informações</th>
             <th>Ações</th>
         </tr>
         </thead>
+
         <tbody>
         </tbody>
     </table>
@@ -66,4 +103,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
